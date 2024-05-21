@@ -13,7 +13,6 @@ const validateToken = async(req,res,next) => {
                 console.log(err);
                 return res.sendStatus(403)
             }
-            console.log(decoded);
             req.user = decoded.user;
             return next();
         })
