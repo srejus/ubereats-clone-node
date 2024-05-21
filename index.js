@@ -7,6 +7,7 @@ const userRoute = require('./routes/userRoutes');
 const restaurantRoute = require("./routes/restaurantRoutes");
 const productRoute = require('./routes/productRoute');
 const cartRoute = require('./routes/cartRoute');
+const orderRoute = require('./routes/orderRoute');
 
 app = express();
 app.use(express.json());
@@ -19,6 +20,7 @@ app.use("/api/users", userRoute);
 app.use("/api/restaurants",restaurantRoute);
 app.use("/api/products",productRoute);
 app.use('/api/cart',cartRoute);
+app.use('/api/order',orderRoute);
 
 
 // DB connection
